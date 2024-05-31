@@ -1,0 +1,30 @@
+---
+title: "workshop-09"
+format: html
+editor: visual
+---
+
+```{r}
+# Load libraries
+library(tidyverse)
+library(lterdatasampler)
+library(ggeffects)
+library(here)
+```
+
+```{r}
+# Load data
+data(pie_crab)
+view(pie_crab)
+
+```
+
+exploratory vis
+
+```{r}
+ggplot(aes(x = latitude, y = size), data = pie_crab) + # set up plot
+geom_point(color = "pink") + # make pink scatterplot
+  labs(x = "latitude", y = "size (mm)") + #labels
+  theme_minimal() # remove gridlines
+
+```
